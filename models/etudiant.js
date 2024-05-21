@@ -12,13 +12,25 @@ const etudiantSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true // Assure que chaque email est unique dans la base de données
+        unique: true
     },
     password: {
         type: String,
         required: true
-    }
-
-});
-
+    },
+    gouvernorat: [{
+        nom: {
+            type: String,
+            default: ' '
+        },
+        argents: {
+            type: Number,
+            default: 0
+        },
+        nombre_de_compost: {
+            type: Number,
+            default: 0
+        }
+    }]
+})
 module.exports = mongoose.model('Etudiant', etudiantSchema);

@@ -8,5 +8,7 @@ router.get('/', etudiantController.getAll);
 router.get('/unreal', etudiantController.getAll);
 router.get('/:id', etudiantController.getById);
 router.put('/:id', etudiantController.update);
+router.put('/coins',etudiantController.updateCoins);
+
 router.delete('/:id', etudiantController.delete);
 module.exports = router;

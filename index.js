@@ -4,6 +4,7 @@ const authRoutes = require("./routes/authRoutes");
 const EtudiantRoutes = require("./controllers/EtudiantController");
 const EnseignantRoutes = require("./controllers/EnseignantController");
 const FeedbackRoutes = require("./routes/feedbackRoutes"); // Corrected import path
+const RequestRoutes = require("./routes/requestRoutes");
 
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -30,3 +31,4 @@ app.use(authRoutes);
 app.use('/etudiants', EtudiantRoutes);
 app.use('/enseignants', EnseignantRoutes);
 app.use('/feedbacks', FeedbackRoutes); // Corrected route path
+app.use('/requests',RequestRoutes);
